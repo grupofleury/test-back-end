@@ -1,13 +1,10 @@
 import * as express from 'express'
-import * as bodyParser from 'body-parser'
+
 
 import { ExamsController } from './exam-controller';
 import { ClientController } from './client-controller';
 
 const server = express()
-server.use(bodyParser.json())
-
-
 
 server.get("/get-exames", (_, res) => {
     const examController = new ExamsController()
